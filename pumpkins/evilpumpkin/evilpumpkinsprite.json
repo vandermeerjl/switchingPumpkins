@@ -1,0 +1,25 @@
+{
+"images": ["evilpumpkinsprite.png"],
+"frames": [
+
+    [2, 2, 208, 204], 
+    [212, 2, 202, 207], 
+    [2, 208, 207, 206], 
+    [420, 209, 202, 206], 
+    [416, 2, 206, 205], 
+    [211, 211, 207, 205]
+],
+"animations": {
+    
+        "evilpumpkinfive":[0], 
+        "evilpumpkinfour":[1], 
+        "evilpumpkinseven":[2], 
+        "evilpumpkinsix":[3], 
+        "evilpumpkinthree":[4], 
+        "evilpumpkinzero":[5]
+},
+"texturepacker": [
+        "SmartUpdateHash: $TexturePacker:SmartUpdate:a215f857c26e95ed93d43c74228301ff:bae631d6a9c14b4cc7a29cfbb1ec62e5:c74992f6a4bb289ca3b667b74475943e$",
+        "Created with TexturePacker (http://www.texturepacker.com) for EaselJS"
+]
+}

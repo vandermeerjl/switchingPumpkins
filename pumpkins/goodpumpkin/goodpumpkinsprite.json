@@ -1,0 +1,25 @@
+{
+"images": ["goodpumpkinsprite.png"],
+"frames": [
+
+    [415, 2, 207, 203], 
+    [2, 2, 204, 208], 
+    [206, 212, 207, 206], 
+    [2, 212, 202, 207], 
+    [208, 2, 205, 205], 
+    [415, 207, 206, 204]
+],
+"animations": {
+    
+        "goodpumpkinfive":[0], 
+        "goodpumpkinfour":[1], 
+        "goodpumpkinseven":[2], 
+        "goodpumpkinsix":[3], 
+        "goodpumpkinthree":[4], 
+        "goodpumpkinzero":[5]
+},
+"texturepacker": [
+        "SmartUpdateHash: $TexturePacker:SmartUpdate:ca0fb677d0736e1a2d8be60465821810:e160c57dc16df75ce924a288a2ed8ad4:617c20d4fd5be2b170d318e44cf0dc32$",
+        "Created with TexturePacker (http://www.texturepacker.com) for EaselJS"
+]
+}

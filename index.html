@@ -1,0 +1,494 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title> TUTORIAL </title>
+    <meta charset ='UTF-8' /> 
+
+    <script src="http://code.createjs.com/easeljs-0.7.0.min.js"></script>
+
+<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+<link rel="icon" href="/favicon.ico" type="image/x-icon">
+    
+<script>
+
+var gStageOne;
+var gDataOne;
+var gSpritesheetOne;
+var goodPumpkinOne;
+
+function ginit() {
+    gStageOne = new createjs.Stage(document.getElementById('canvas-one'));
+    createjs.Ticker.addEventListener("tick", runGoodPumpkinOne);
+    createjs.Ticker.setFPS(5);
+    spinGoodPumpkinOne();
+}
+
+function spinGoodPumpkinOne() {
+
+gDataOne = {
+
+"images": ["goodpumpkinsprite.png"],
+"frames": [
+
+    [415, 207, 206, 204],
+    [208, 2, 205, 205],
+    [2, 2, 204, 208], 
+    [415, 2, 207, 203],
+    [2, 212, 202, 207],  
+    [206, 212, 207, 206],   
+     
+],
+"animations": {
+    
+    "goodAnimationOne":[0,1,2,3,4,5],  
+}
+};
+
+   gSpritesheetOne = new createjs.SpriteSheet(gDataOne);
+   goodPumpkinOne = new createjs.Sprite(gSpritesheetOne,'goodAnimationOne');
+   goodPumpkinOne.regY = goodPumpkinOne.getBounds().height/2;
+   goodPumpkinOne.regX = goodPumpkinOne.getBounds().width/2;
+   goodPumpkinOne.y = 150;
+   goodPumpkinOne.x = 150;
+
+   gStageOne.addChild(goodPumpkinOne);
+ }
+
+ function runGoodPumpkinOne(e) {
+    gStageOne.update();
+ }
+
+//////////////////////////////////////////////////////////////
+
+var eStageOne;
+var eDataOne;
+var eSpritesheetOne;
+var evilPumpkinOne;
+
+function einit() {
+    eStageOne = new createjs.Stage(document.getElementById('canvas-two'));
+    createjs.Ticker.addEventListener("tick", runEvilPumpkinOne);
+    createjs.Ticker.setFPS(5);
+    spinEvilPumpkinOne();
+}
+
+function spinEvilPumpkinOne() {
+
+eDataOne = {
+
+"images": ["evilpumpkinsprite.png"],
+"frames": [
+
+    [211, 211, 207, 205],
+    [416, 2, 206, 205], 
+    [212, 2, 202, 207],
+    [2, 2, 208, 204], 
+    [420, 209, 202, 206], 
+    [2, 208, 207, 206],  
+   
+     
+],
+
+"animations": {
+    
+  "evilAnimationOne": [0,1,2,3,4,5]              
+}
+};
+
+   eSpritesheetOne = new createjs.SpriteSheet(eDataOne);
+   evilPumpkinOne = new createjs.Sprite(eSpritesheetOne,'evilAnimationOne');
+   evilPumpkinOne.regY = evilPumpkinOne.getBounds().height/2;
+   evilPumpkinOne.regX = evilPumpkinOne.getBounds().width/2;
+   evilPumpkinOne.y = 150;
+   evilPumpkinOne.x = 150;
+
+   eStageOne.addChild(evilPumpkinOne);
+ }
+
+ function runEvilPumpkinOne(e) {
+  eStageOne.update();
+ }
+
+
+//////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////
+
+
+var gStage;
+var gData;
+var gSpritesheet;
+var goodPumpkin;
+
+function g2init() {
+    gStage = new createjs.Stage(document.getElementById('canvas-three'));
+    createjs.Ticker.addEventListener("tick", runGoodPumpkin);
+    createjs.Ticker.setFPS(5);
+    spinGoodPumpkin();
+}
+
+function spinGoodPumpkin() {
+
+gData = {
+
+"images": ["goodpumpkinsprite.png"],
+"frames": [
+
+    [415, 207, 206, 204],
+    [208, 2, 205, 205],
+    [2, 2, 204, 208], 
+    [415, 2, 207, 203],
+    [2, 212, 202, 207],  
+    [206, 212, 207, 206],   
+     
+],
+"animations": {
+    
+    "goodAnimation":[0,1,2,3,4,5],  
+}
+};
+
+   gSpritesheet = new createjs.SpriteSheet(gData);
+   goodPumpkin = new createjs.Sprite(gSpritesheet,'goodAnimation');
+   goodPumpkin.regY = goodPumpkin.getBounds().height/2;
+   goodPumpkin.regX = goodPumpkin.getBounds().width/2;
+   goodPumpkin.y = 150;
+   goodPumpkin.x = 150;
+
+   gStage.addChild(goodPumpkin);
+ }
+
+ function runGoodPumpkin(e) {
+    gStage.update();
+ }
+
+//////////////////////////////////////////////////////////////
+
+var eStage;
+var eData;
+var eSpritesheet;
+var evilPumpkin;
+
+function e2init() {
+    eStage = new createjs.Stage(document.getElementById('canvas-four'));
+    createjs.Ticker.addEventListener("tick", runEvilPumpkin);
+    createjs.Ticker.setFPS(5);
+    spinEvilPumpkin();
+}
+
+function spinEvilPumpkin() {
+
+eData = {
+
+"images": ["evilpumpkinsprite.png"],
+"frames": [
+
+    [211, 211, 207, 205],
+    [416, 2, 206, 205], 
+    [212, 2, 202, 207],
+    [2, 2, 208, 204], 
+    [420, 209, 202, 206], 
+    [2, 208, 207, 206],  
+   
+     
+],
+
+"animations": {
+    
+  "evilAnimation": [0,1,2,3,4,5]              
+}
+};
+
+   eSpritesheet = new createjs.SpriteSheet(eData);
+   evilPumpkin = new createjs.Sprite(eSpritesheet,'evilAnimation');
+   evilPumpkin.regY = evilPumpkin.getBounds().height/2;
+   evilPumpkin.regX = evilPumpkin.getBounds().width/2;
+   evilPumpkin.y = 150;
+   evilPumpkin.x = 150;
+
+   eStage.addChild(evilPumpkin);
+ }
+
+ function runEvilPumpkin(e) {
+  eStage.update();
+ }
+
+//////////////////////////////////////////////////////////////
+
+document.onkeydown = handleKeyDown;
+
+function handleKeyDown(event) {
+  var index = 0;
+  switch(event.keyCode){
+    case 69:
+      document.getElementById("canvas-four").style.zIndex = index +"1";
+      document.getElementById("canvas-three").style.zIndex = index;
+      break;
+    case 71:
+      document.getElementById("canvas-three").style.zIndex = index +"1";
+      document.getElementById("canvas-four").style.zIndex = index;
+      break;
+  }
+}
+
+</script>
+
+    <link href = "main.css" rel="stylesheet" />
+    <link href='http://fonts.googleapis.com/css?family=Oswald:400,300,700' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,700' rel='stylesheet' type='text/css'>
+
+</head>
+<body onLoad="ginit(), einit(), g2init(), e2init();">
+
+    <header>
+    <div class="nav">
+      <ul>
+        <li class="home"><a href="tutorial.html">Top</a></li>
+        <li class="tutorials"><a href="#step1">Step 1</a></li>
+        <li class="about"><a href="#step2">Step 2</a></li>
+        <li class="news"><a href="#step3">Step 3</a></li>
+        <li class="contact"><a href="#step4">Step 4</a></li>
+      </ul>
+    </div>
+  </header>
+
+<div id = "outerPage">
+
+<div id="page">
+
+  <img id = "top-image" src = "topimage.png" />
+
+  <div id = "content">
+        
+        <h1> Animation and Sprite Sheets</h2>
+
+        <p> For this tutorial you are going to learn how to create a simple sprite sheet animation of a spinning jack-o-lantern pumpkin! Once you learn how to create this animation, you are then going to learn how to control the canvas using key codes. Happy Halloween! </p>
+
+        <div id ="step1">
+
+            <h2> Step One: Creating the Canvas and Adding a Ticker </h2>
+
+            <p> The first step in this tutorial is creating a new stage and choosing the canvas that you want the animation to appear in. You add the canvas into your HTML and give it a specific id. This is so that when you make a new stage in the script, you can identify the different canvas. The next thing we must include is the ticker. The ticker class helps you play the animation's frames at a set interval. Think of the FPS of the ticker as your speed. The higher the number the faster your animation will run. Even though you have defined the ticker now, it will be used to run your animation after you list the information about the sprite sheet in the next step!  </p>
+
+            <p> Here is the code: </p>
+
+            <div class="codeBoxContainer">
+                <div class = "codebox">
+                  <code>
+                  var gStage; <br>
+                  var gData; <br>
+                  var gSpritesheet;<br>
+                  var goodPumpkin;<br>
+
+                <br>
+
+                  function ginit() {<br>
+                    gStage = new createjs.Stage(document.getElementById('canvas-one'));<br>
+                    createjs.Ticker.addEventListener("tick", runGoodPumpkin);<br>
+                    createjs.Ticker.setFPS(5);<br>
+                    spinGoodPumpkin();<br>
+                  } 
+                </code>
+              </div>
+              <div class = "codebox">
+                <code>
+                var eStage;<br>
+                var eData;<br>
+                var eSpritesheet;<br>
+                var evilPumpkin;<br>
+                <br>
+                function einit() {<br>
+                    eStage = new createjs.Stage(document.getElementById('canvas-two'));<br>
+                    createjs.Ticker.addEventListener("tick", runEvilPumpkin);<br>
+                    createjs.Ticker.setFPS(5);<br>
+                    spinEvilPumpkin();<br>
+                }               
+                </code>
+              </div>
+            </div>
+
+        </div>
+
+
+        <div id= "step2">
+
+            <h2> Step Two: Creating the Sprite Sheet </h2>
+
+            <p> Creating a sprite sheet is the essential part of this tutorial. Just think of a sprite sheet as a single image made up of multiple smaller images that when assigned to a certain sequence, becomes animated when it is run. In order to run a sprite sheet you must define three key pieces of information. First, you define which image you are using in the "images" section. You write the name of your png image here. The second step is to define the frames. Each image has a specific position located in the single sprite image and we assign them in an array. The first number is the width, the second number is the height, the third is regX, and the fourth number is regY. Lastly, you define which frames will appear in the animation. </p>
+
+            <p>For this project in particular, I made two sprite sheets. One for the good spinning pumpkin and another for the bad spinning pumpkin. To do this, I used a software called Texture Packer. What this software does is takes all of your images and creates a single image as well as the JavaScript code for CreateJS. The software is free, it is very easy to use and can be downloaded online through this link: </p>
+
+            <p><a class= "link" href = "https://www.codeandweb.com/texturepacker"> Texture Packer Link! </a></p>
+
+            <p> As you can see from the screen shots below, I have combined the various images of my rotating pumpkin into a single image. When I exported the single image, I copied and pasted the JavaScript code for my frames and my images into my HTML file between the script tags. I did have some rearranging to do and I also created one single animation defining which frames to use in an array for both the good pumpkin and the bad pumpkin. </p>
+
+            <img class = "content-image" src = "spritesheets.png" />
+
+            <p> Here is the code for the good pumpkin: </p>
+
+                <div class = "codebox">
+                  <code>
+                   function spinGoodPumpkin() <br>
+                    <br>
+                    gData = {<br>
+                    <br>
+                    "images": ["goodpumpkinsprite.png"],<br>
+                    "frames": [<br>
+                      <br>
+                        [415, 207, 206, 204],<br>
+                        [208, 2, 205, 205],<br>
+                        [2, 2, 204, 208], <br>
+                        [415, 2, 207, 203],<br>
+                        [2, 212, 202, 207], <br> 
+                        [206, 212, 207, 206], <br>  
+                         <br>
+                    ],<br>
+                    "animations": {<br>
+                        "goodAnimation":[0,1,2,3,4,5], <br> 
+                    }<br>
+                    };<br>
+                      <br>
+                       gSpritesheet = new createjs.SpriteSheet(gData);<br>
+                       goodPumpkin = new createjs.Sprite(gSpritesheet,'goodAnimation');<br>
+                       goodPumpkin.regY = goodPumpkin.getBounds().height/2;<br>
+                       goodPumpkin.regX = goodPumpkin.getBounds().width/2;<br>
+                       goodPumpkin.y = 150;<br>
+                       goodPumpkin.x = 150;<br>
+                      <br>
+                       gStage.addChild(goodPumpkin);<br>
+                     }<br>
+
+                     function runGoodPumpkin(e) {<br>
+                        gStage.update();<br>
+                     }<br>
+                  </code>
+              </div>
+               <p> Now do the same for the evil pumpkin: </p>
+
+              <div class = "codebox">
+                <code> 
+                  function spinEvilPumpkin() <br>
+                    <br>
+                    eData = {<br>
+                    <br>
+                    "images": ["evilpumpkinsprite.png"],<br>
+                    "frames": [<br>
+                      <br>
+                        [415, 207, 206, 204],<br>
+                        [208, 2, 205, 205],<br>
+                        [2, 2, 204, 208], <br>
+                        [415, 2, 207, 203],<br>
+                        [2, 212, 202, 207], <br> 
+                        [206, 212, 207, 206], <br>  
+                         <br>
+                    ],<br>
+                    "animations": {<br>
+                        "evilAnimation":[0,1,2,3,4,5], <br> 
+                    }<br>
+                    };<br>
+                      <br>
+                       eSpritesheet = new createjs.SpriteSheet(eData);<br>
+                       evilPumpkin = new createjs.Sprite(eSpritesheet,'evilAnimation');<br>
+                       evilPumpkin.regY = evilPumpkin.getBounds().height/2;<br>
+                       evilPumpkin.regX = evilPumpkin.getBounds().width/2;<br>
+                       evilPumpkin.y = 150;<br>
+                       evilPumpkin.x = 150;<br>
+                      <br>
+                       eStage.addChild(evilPumpkin);<br>
+                     }<br>
+
+                     function runEvilPumpkin(e) {<br>
+                        eStage.update();<br>
+                     }<br>
+
+                </code>
+              </div>
+
+            <p> The result below is what would happen when you run the animation. To get the colorful background, you simply add a gradient to the canvases in your main CSS document. Both of these animations are running at the same time and side by side. In the next step we will learn how to layer them using CSS. </p>
+
+            <div class = "canvas-holder-1">
+              <canvas id="canvas-one" width = "300" height ="300" > </canvas> 
+              <canvas id="canvas-two" width = "300" height = "300" > </canvas>
+            </div>
+
+        </div>
+
+        <div id ="step3">
+
+            <h2> Step Three: Layering the Sprites </h2>
+
+            <p> In order to create the cool effect of this tutorial, both of these animations have to be arranged so that one canvas is layered directly on top of the other. This can be done by adjusting the style of both canvases in your main CSS file. If you set both of the canvases position to absolute they will layer. I always want the good pumpkin to appear on top so I set the z-index to one. Due to the fact that the internal style sheet CSS can overwrite an external style sheet, we can use this to our advantage when changing the z index by key codes. </p>
+
+            <p> Here is the code for the main CSS external file: </p>
+
+             <div class = "codebox">
+                <code> 
+                    #canvas-one { <br>
+                      border-bottom: 1px solid #d2d6d5;<br>
+                      background-image: linear-gradient(#5C1F3D, #993366);<br>
+                      position:relative;<br>
+                    }<br>
+                  <br>
+                    #canvas-two {<br>
+                      border-bottom: 1px solid red;<br>
+                      background-image: linear-gradient(#5C1F3D, red);<br>
+                      position: relative;<br>
+
+                    }
+                </code>
+             </div>
+
+        </div>
+
+         <div id ="step4">
+
+            <h2> Step Four: Changing the Z Index with Key Codes </h2>
+
+            <p> Now that you have both of the pumpkin animations running, and the canvases properly layered using an external style sheet, it is time to change the z-index using key codes. In the demo below, you can change the good pumpkin into an evil pumpkin by pressing the 'e' key on your keyboard and then change the evil pumpkin into a good pumpkin by pressing the 'g' key on your keyboard. You can make do this with any key on the keyboard as long as you define which one. Each key on the keyboard has a specific number which you can find out <a class= "link" href = "http://www.asquare.net/javascript/tests/KeyCode.html"> HERE! </a></p>
+
+            <div class = "codebox">
+                <code> 
+                  document.onkeydown = handleKeyDown;<br>
+                  <br>
+                  function handleKeyDown(event) {<br>
+                    var index = 0;<br>
+                    switch(event.keyCode){<br>
+                      case 69:<br>
+                        document.getElementById("canvas-four").style.zIndex = index +"1";<br>
+                        document.getElementById("canvas-three").style.zIndex = index;<br>
+                        break;<br>
+                      case 71:<br>
+                        document.getElementById("canvas-three").style.zIndex = index +"1";<br>
+                        document.getElementById("canvas-four").style.zIndex = index;<br>
+                        break<br>
+                    }<br>
+                  }<br>
+
+                </code>
+            </div>
+
+            <p> As you can see in the code, e's key code number is 69 and g's is 71. You can also see that I have create a variable called index and that I have set it equal to 0. When the user presses the 'e' key it will increase the evil canvas' index by one and change the good canvas' index to 0. The opposite happens when the user presses the 'g' key, which makes the good canvas back in front. Update this function and see what happens! </p>
+
+
+            <p><strong> Press the 'e' key for the evil pumpkin and the 'g' key for the good pumpkin: </strong> </p>
+
+            <div class = "canvas-holder">
+            <canvas id="canvas-three" width = "300" height ="300" > </canvas> 
+            <canvas id="canvas-four" width = "300" height = "300" > </canvas>
+          </div>
+
+          <h2> Congratulations you survived my tutorial! </h2>
+
+        </div>
+          
+
+        </div>
+
+        
+    </div>
+</div>
+</div>
+
+</body>
+</html>
